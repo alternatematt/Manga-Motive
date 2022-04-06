@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* background mixed colour effect */
+.row{
+    width: 100%;
+    padding: 1px;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        #5F4B8BFF,
+        #E69A8DFF
+    );
+}
+.col{
+    padding: 5px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5F4B8BFF;
+    font-family: Verdana;
+}
+
+.logo a{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 19px;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Verdana;
+    transition: 0.3s;
+}
+.logo a:hover{
+  color: #E69A8DFF
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 39%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+  color: #E69A8DFF
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5F4B8BFF;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 11;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .burger:hover{
+      color: #E69A8DFF
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+.nav-links-active{
+  transform: translateY(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-7px, 3.3px);
+
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-6.5px, -3.3px);
+}
+
+/* Home */
+
+
+#recommendedM{
+    font-family: Verdana;
+    left: 10%;
+    width: 40%;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    top: 190px;
+}
+@media (max-width:1300px){
+  #recommendedM{
+    top: 180px;
+    left: 100px;
+    font-size: 15px;
+
+  }
+}
+@media (max-width:800px){
+  #recommendedM{
+    text-align: center;
+    font-size: 22px;
+  }
+}
+#naruto{
+    width: 256px;
+}
+#deathnote{
+    width: 266px;
+}
+#bleach{
+    width: 256px;
+}
+#jojos{
+    width: 256px;
+}
+
+.carousel-container{
+    width: 250px;
+    height: 390px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+    border: 5px groove white;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+}
+.img{
+  width: 250px;
+  height: 390px;
+  background-size: cover;
+  
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: #5F4B8BFF;
+    cursor: pointer;
+}
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: #E69A8DFF;
+    cursor: pointer;
+}
+@media (max-width:800px){
+
+  .carousel-container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #recommendedM{
+    top: 0;
+    margin-left: 60px;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+
+
+/* store */
+.card{
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 50px 10px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+.TitleRating{
+  margin-top: -35px;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+.card:hover{
+    transform: translateY(5px);
+}
+
+.card1{
+    background-image: url("bleachcover.png");
+    height: 180px;
+    width: 120px;
+}
+.card2{
+    background-image: url("narutocover.png");
+    height: 180px;
+    width: 120px;
+}
+.card3{
+    background-image: url("onepiececover.png");
+    height: 180px;
+    width: 120px;
+}
+.card4{
+    background-image: url("deathnotecover.png");
+    height: 180px;
+    width: 120px;
+}
+.card5{
+  background-image: url("chainsawmancover.png");
+  height: 180px;
+  width: 120px;
+}
+.card6{
+  background-image: url("souleatercover.png");
+  height: 180px;
+  width: 120px;
+}
+.card7{
+  background-image: url("jojoscover.png");
+  height: 180px;
+  width: 120px;
+}
+.card8{
+  background-image: url("komicover.png");
+  height: 180px;
+  width: 120px;
+}
+.card9{
+  background-image: url("bluelockcover.png");
+  height: 180px;
+  width: 120px;
+}
+.card10{
+  background-image: url("dandadancover.png");
+  height: 180px;
+  width: 120px;
+}
+.card11{
+  background-image: url("borutocover.png");
+  height: 180px;
+  width: 120px;
+}
+.card12{
+  background-image: url("opmcover.png");
+  height: 180px;
+  width: 120px;
+}
+
+.manga1{
+  height: 300px;
+  width: 200px;
+  z-index: 10;
+  margin-left: 120px;
+}
+.mangaDes{
+  position: relative;
+  bottom: 150px;
+  left: 10%;
+  width: 40%;
+  display: inline-block;
+  color: white;
+  font-family: Verdana;
+  font-size: 13px;
+}
+@media (max-width: 960px){
+  .manga1{
+    margin-left: 90px;
+  }
+}
+@media (max-width:600px){
+  .mangaDes{
+    position: relative;
+    bottom: 120px;
+    left: 2%;
+    font-size: 15px;
+  }
+  .manga1{
+    margin-left: 50px;
+  }
+}
+
+.checked{
+  color: white;
+}
+#featuredM{
+  font-family: Verdana;
+  font-size: 19px;
+  color: white;
+  padding: 10px;
+}
+#PopularM{
+  margin: 0px 10px 0px;
+  font-family: Verdana;
+  font-size: 19px;
+  color: white;
+}
+
+#footer{
+    background-color: #5F4B8BFF;
+    position: static;
+    clear: both;
+    height: 54px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+}
+/* Wishlist */
+
+table, th, td {
+  border:1px solid black;
+  padding: 0px;
+  text-align: center;
+
+}
+table{
+  font-family: Verdana;
+  color: white;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+td{
+  padding: 10px;
+}
+.cardWishlist{
+  width: 120px;
+  height: 180px;
+
+  display: inline-block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+}
+.mangaWishlist{
+  padding: 0px;
+}
+
+
+/* Feedback content*/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  input[type=email], select, textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #ffffff;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #E69A8DFF;
+  }
+  #headingF{
+    margin-top: 60px;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    font-family: Verdana;
+    font-size: 23px;
+  }
+  .headingT{
+    color: white;
+    text-align: center;
+    border: 50%;
+    padding: 100px;
+    font-family: Verdana;
+    font-size: 23px;
+  }
+  #thankspara{
+    font-size: 19px;
+    padding: 42px;
+  }
+
+  /* Add a background color and some padding around the form */
+  .container {
+    padding: 60px;
+    font-family: Verdana;
+    font-size: 14px;
+  }
+label{
+      color: white;
+}
+
+/* Help page */
+.containerH1{
+    text-align: center;
+    padding: 60px;
+    font-family: Verdana;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+.containerH2{
+    text-align: center;
+    padding: 60px;
+    font-family: Verdana;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+.containerH3{
+    text-align: center;
+    padding: 60px;
+    font-family: Verdana;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+.helpCon1{
+    color: white;
+    font-family: Verdana;
+    font-size: 17px;
+}
+.helpCon2{
+    color: white;
+    font-family: Verdana;
+    font-size: 17px;
+
+}
+.helpCon3{
+    color: white;
+    font-family: Verdana;
+    font-size: 17px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="master.css">
+        <link rel="starRating" href="starRating.scss">
+        <title>Feedback</title>
+    </head>
+
+<body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Manga Motive</a>
+      </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="help.html">Help</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>
+
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    </nav>
+
+<div class="row">
+  <div class="col">
+    <h2 id="headingF">We would love to hear your Feedback!</h2>
+    <div class="container">
+
+      <form name="feedbackForm" action="thanks.html" onsubmit="return validateForm(event)" method="post">
+        <label for="FName" id="Fname">First Name:</label>
+        <input type="text" name="fname">
+
+        <label for="SName" id="Sname">Surname:</label>
+        <input type="text" name="sname">
+
+        <label for="Email" id="Email">Email:</label>
+        <input type="email" name="email">
+
+        <label for="smalldescrip" id="smallDes">Small Description:</label>
+        <textarea name="subject" placeholder="" style="height:200px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>Manga Motive</p>
+  <p>Contact contact@mangamotive.com</p>
+  <p>Written by Matthew</p>
+  <p>Copyright 2021</p>
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+
+</html>
